@@ -90,3 +90,4 @@ if selection == "Personalizado" and uploaded_file is not None and model:
             analyze = AnalyzeImageUseCase.analyze_image(image_input=image_bytes, prompt=prompt, model=model)
             st.markdown("<h3 style='text-align: center; color: white;'>Resultado da Análise:</h3>", unsafe_allow_html=True)
             st.code(analyze, language="text")
+            
