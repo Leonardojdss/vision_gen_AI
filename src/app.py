@@ -1,7 +1,7 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 from dotenv import load_dotenv
-from src.use_case.analyze_image import AnalyzeImageUseCase
+from use_case.analyze_image import AnalyzeImageUseCase
 import os
 from io import BytesIO
 
