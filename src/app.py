@@ -51,7 +51,7 @@ if selection == "OCR" and uploaded_file is not None and start==True and model:
 
     with st.spinner("Analisando imagem..."):   
         # analyze imge
-        analyze = AnalyzeImageUseCase.analyze_image(image_input=image_bytes, prompt="prompt/ocr_prompt.txt", model=model)
+        analyze = AnalyzeImageUseCase.analyze_image(image_input=image_bytes, prompt="src/prompts/ocr_prompt.txt", model=model)
         st.markdown("<h3 style='text-align: center; color: white;'>Resultado da Análise:</h3>", unsafe_allow_html=True)
         st.code(analyze, language="text")
 
@@ -62,7 +62,7 @@ if selection == "Descrever Imagem" and uploaded_file is not None and start==True
 
     with st.spinner("Analisando imagem..."):   
         # analyze imge
-        analyze = AnalyzeImageUseCase.analyze_image(image_input=image_bytes, prompt="prompt/image_description_prompt.txt", model=model)
+        analyze = AnalyzeImageUseCase.analyze_image(image_input=image_bytes, prompt="src/prompts/image_description_prompt.txt", model=model)
         st.markdown("<h3 style='text-align: center; color: white;'>Resultado da Análise:</h3>", unsafe_allow_html=True)
         st.code(analyze, language="text")
 
@@ -73,7 +73,7 @@ if selection == "Extrair Chaves e Valores" and uploaded_file is not None and sta
 
     with st.spinner("Analisando imagem..."):
         # analyze imge
-        analyze = AnalyzeImageUseCase.analyze_image(image_input=image_bytes, prompt="prompt/key_value_extraction_prompt.txt", model=model)
+        analyze = AnalyzeImageUseCase.analyze_image(image_input=image_bytes, prompt="src/prompts/key_value_extraction_prompt.txt", model=model)
         st.markdown("<h3 style='text-align: center; color: white;'>Resultado da Análise:</h3>", unsafe_allow_html=True)
         st.code(analyze, language="text")
 
