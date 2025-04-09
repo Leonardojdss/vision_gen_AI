@@ -14,7 +14,6 @@ def completion_image(image_base64: str, prompt: str, model: str):
     else:
         prompt = prompt
 
-    print(f"Prompt: {prompt}")
     response_image = client.chat.completions.create(
         model=model,
         messages=[
